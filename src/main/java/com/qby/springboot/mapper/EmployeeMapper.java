@@ -3,8 +3,10 @@ package com.qby.springboot.mapper;
 
 import com.qby.springboot.bean.Employee;
 import org.apache.ibatis.annotations.*;
+import org.springframework.stereotype.Repository;
 
 @Mapper
+@Repository
 public interface EmployeeMapper {
 
     @Select("SELECT * FROM employee WHERE id = #{id}")
