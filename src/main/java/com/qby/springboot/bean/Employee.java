@@ -2,8 +2,10 @@ package com.qby.springboot.bean;
 
 import lombok.*;
 
+import java.io.Serializable;
+
 @Data
-public class Employee {
+public class Employee implements Serializable {
     private Integer id;
     private String lastName;
     private String email;
