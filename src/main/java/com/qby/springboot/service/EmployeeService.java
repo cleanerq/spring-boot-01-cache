@@ -24,7 +24,7 @@ public class EmployeeService {
      * @param id
      * @return
      */
-    @Cacheable(cacheNames = {"emp"})
+    @Cacheable(cacheNames = {"emp"}, keyGenerator = "myKeyGenerator")
     public Employee getEmp(Integer id) {
         log.info("查询:{}号员工", id);
         return employeeMapper.getEmpById(id);
